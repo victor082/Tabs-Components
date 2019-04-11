@@ -43,7 +43,9 @@ class TabItem {
     const items = document.querySelectorAll('.tabs-item');
 
     // Remove the class "tabs-item-selected" from each element
-    this.element.classList.remove('tabs-item-selected')
+    Array.from(items).forEach(function(element) {
+      element.classList.remove('tabs-item-selected')
+    })
     // Add a class named "tabs-item-selected" to this element
     this.element.classList.add('tabs-item-selected');
   }
